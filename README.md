@@ -67,9 +67,9 @@ which also runs an OpenVPN server, and connects the virtual tap device that
 the OpenVPN server creates to an ethernet bridge device.
 
 
-## Internal Client Diagram
+## Internal Security Onion Server Diagram
 
-![Internal Security Onion client diagram](img/InternalDiagram_Client.jpg)
+![Internal Security Onion server diagram](img/InternalDiagram_Server.jpg)
 
 
 ## Creating Nonroot User
@@ -199,10 +199,10 @@ Edit this SO setup config file for your setup. Some notes:
 * The `sosetup` utility must be run twice: the first time through,
   it will create an `/etc/network/interfaces`, which we then modify
   before re-running `sosetup`.
-* You should set the managemetn config type (recommend static type)
+* You should set the management config type (recommend static type)
     * If static management type, you also need SO instance IP,
       netmask, gateway, and nameservers (info is available for most
-      coud providers, but may be buried in documentation somewhere)
+      cloud providers, but may be buried in documentation somewhere)
 * Can leave most options alone, but elastic stack can be turned off
   via `ELASTIC='no'`
 
@@ -540,9 +540,9 @@ connect the OpenVPN virtual tap with the daemonlogger virtual interface via an
 ethernet bridge.
 
 
-## Internal Security Onion Server Diagram
+## Internal Client Diagram
 
-![Internal Security Onion server diagram](img/InternalDiagram_Server.jpg)
+![Internal Security Onion client diagram](img/InternalDiagram_Client.jpg)
 
 
 ## Install Required Software
